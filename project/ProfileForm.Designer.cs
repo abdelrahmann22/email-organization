@@ -50,6 +50,7 @@
             settingsBtn.TabIndex = 1;
             settingsBtn.Text = "Settings";
             settingsBtn.UseVisualStyleBackColor = true;
+            settingsBtn.Click += settingsBtn_Click;
             // 
             // inboxBtn
             // 

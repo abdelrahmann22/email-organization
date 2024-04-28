@@ -39,5 +39,10 @@ namespace project
             inboxform.FormClosed += (s, args) => this.Close();
             inboxform.Show();
         }
+
+        private void settingsBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
