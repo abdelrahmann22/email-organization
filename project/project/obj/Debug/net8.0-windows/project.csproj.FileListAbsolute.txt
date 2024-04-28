@@ -15,3 +15,5 @@ C:\Users\youss\OneDrive\Desktop\project\email-organization\project\project\obj\D
 C:\Users\youss\OneDrive\Desktop\project\email-organization\project\project\obj\Debug\net8.0-windows\project.pdb
 C:\Users\youss\OneDrive\Desktop\project\email-organization\project\project\obj\Debug\net8.0-windows\project.genruntimeconfig.cache
 C:\Users\youss\OneDrive\Desktop\project\email-organization\project\project\obj\Debug\net8.0-windows\ref\project.dll
+C:\Users\youss\OneDrive\Desktop\project\email-organization\project\project\obj\Debug\net8.0-windows\project.Form2.resources
+C:\Users\youss\OneDrive\Desktop\project\email-organization\project\project\obj\Debug\net8.0-windows\project.Form3.resources
