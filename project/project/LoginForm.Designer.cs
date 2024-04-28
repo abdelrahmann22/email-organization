@@ -53,7 +53,6 @@
             enterUsernameLabel.Size = new Size(60, 15);
             enterUsernameLabel.TabIndex = 0;
             enterUsernameLabel.Text = "Username";
-            enterUsernameLabel.Click += enterUsernameLabel_Click;
             // 
             // enterUsernameBox
             // 

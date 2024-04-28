@@ -18,7 +18,7 @@ namespace project
         {
             InitializeComponent();
         }
-        
+
         private void loginBtn_Click(object sender, EventArgs e)
         {
             string pathToUser = $"C:\\Users\\boudy\\Desktop\\email\\users\\{enterUsernameBox.Text}.txt";
@@ -29,12 +29,10 @@ namespace project
                 {
                     MessageBox.Show("Login Successfull.");
                     this.Hide();
-                    InboxForm inboxform = new InboxForm(enterUsernameBox.Text);
-                    inboxform.FormClosed += (s, args) => this.Close();
-                    inboxform.Show();
-                    Program.User currentUser = new Program.User();
-                    currentUser.currentUsername = enterUsernameBox.Text;
-                   
+                    ProfileForm profileform = new ProfileForm(enterUsernameBox.Text);
+                    profileform.FormClosed += (s, args) => this.Close();
+                    profileform.Show();
+
                 }
                 else
                 {
@@ -55,9 +53,6 @@ namespace project
             signupForm.Show();
         }
 
-        private void enterUsernameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

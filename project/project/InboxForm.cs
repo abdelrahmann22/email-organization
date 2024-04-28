@@ -24,11 +24,6 @@ namespace project
             lblCurrentUsername.Text = char.ToUpper(currentUsername[0]) + currentUsername.Substring(1);
             lblCurrentUsername.Font = new Font(lblCurrentUsername.Font.FontFamily, 12);
             lblCurrentUsername.Location = new Point(20, 20);
-        }
-
-        private void emailView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        }       
     }
 }

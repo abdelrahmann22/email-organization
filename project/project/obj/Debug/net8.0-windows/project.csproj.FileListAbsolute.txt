@@ -34,3 +34,5 @@ C:\Users\boudy\Desktop\email-organization\project\project\obj\Debug\net8.0-windo
 C:\Users\boudy\Desktop\email-organization\project\project\obj\Debug\net8.0-windows\project.SignUpForm.resources
 C:\Users\boudy\Desktop\email-organization\project\project\obj\Debug\net8.0-windows\project.LoginForm.resources
 C:\Users\boudy\Desktop\email-organization\project\project\obj\Debug\net8.0-windows\project.InboxForm.resources
+C:\Users\boudy\Desktop\email-organization\project\project\obj\Debug\net8.0-windows\project.HomeForm.resources
+C:\Users\boudy\Desktop\email-organization\project\project\obj\Debug\net8.0-windows\project.ProfileForm.resources

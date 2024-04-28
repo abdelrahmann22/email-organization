@@ -43,8 +43,6 @@
             emailView.Location = new Point(195, 0);
             emailView.Name = "emailView";
             emailView.Size = new Size(1062, 582);
-            emailView.TabIndex = 0;
-            emailView.CellContentClick += emailView_CellContentClick;
             // 
             // checkboxColumn
             // 
