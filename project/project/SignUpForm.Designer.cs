@@ -46,6 +46,7 @@
             usernameBox.Name = "usernameBox";
             usernameBox.Size = new Size(302, 23);
             usernameBox.TabIndex = 0;
+            usernameBox.TextChanged += usernameBox_TextChanged;
             // 
             // emailBox
             // 

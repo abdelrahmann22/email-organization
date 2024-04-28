@@ -109,11 +109,11 @@
 
         #endregion
 
-        private Label enterPasswordLabel;
-        private Label enterUsernameLabel;
         private TextBox enterUsernameBox;
         private TextBox enterPasswordBox;
-        private Button loginBtn;
+        private Label enterUsernameLabel;
+        private Label enterPasswordLabel;
         private LinkLabel RegisterLink;
+        private Button loginBtn;
     }
 }

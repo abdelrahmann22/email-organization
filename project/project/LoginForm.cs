@@ -18,7 +18,7 @@ namespace project
         {
             InitializeComponent();
         }
-
+        
         private void loginBtn_Click(object sender, EventArgs e)
         {
             string pathToUser = $"C:\\Users\\boudy\\Desktop\\email\\users\\{enterUsernameBox.Text}.txt";
@@ -28,6 +28,13 @@ namespace project
                 if (lines[0] == enterUsernameBox.Text && lines[1] == enterPasswordBox.Text)
                 {
                     MessageBox.Show("Login Successfull.");
+                    this.Hide();
+                    InboxForm inboxform = new InboxForm(enterUsernameBox.Text);
+                    inboxform.FormClosed += (s, args) => this.Close();
+                    inboxform.Show();
+                    Program.User currentUser = new Program.User();
+                    currentUser.currentUsername = enterUsernameBox.Text;
+                   
                 }
                 else
                 {

@@ -80,5 +80,10 @@ namespace project
             loginForm.FormClosed += (s, args) => this.Close();
             loginForm.Show();
         }
+
+        private void usernameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
