@@ -21,7 +21,7 @@ namespace project
             lblCurrentUsername = new Label();
             Controls.Add(lblCurrentUsername);
 
-            lblCurrentUsername.Text = $"{char.ToUpper(currentUsername[0]) + currentUsername.Substring(1)}'s profile";
+            lblCurrentUsername.Text = $"{char.ToUpper(this.currentUsername[0]) + this.currentUsername.Substring(1)}'s profile";
             lblCurrentUsername.Font = new Font("Impact", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCurrentUsername.Size = new Size(500, 500);
             lblCurrentUsername.Location = new Point(55, 75);
@@ -35,14 +35,17 @@ namespace project
         private void inboxBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            InboxForm inboxform = new InboxForm(currentUsername);
+            InboxForm inboxform = new InboxForm(this.currentUsername);
             inboxform.FormClosed += (s, args) => this.Close();
             inboxform.Show();
         }
 
         private void settingsBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            SettingsForm settingsform = new SettingsForm(currentUsername);
+            settingsform.FormClosed += (s, args) => this.Close();
+            settingsform.Show();
         }
     }
 }

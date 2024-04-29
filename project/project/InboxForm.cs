@@ -13,18 +13,25 @@ namespace project
     public partial class InboxForm : Form
     {
         private Dictionary<int, string> fileMapping;
-        // Paths to different mail folders
-        String allfile = @"C:\Users\boudy\Desktop\email\profiles\mails\all";
-        string sentfile = @"C:\Users\boudy\Desktop\email\profiles\mails\sent";
-        string recfile = @"C:\Users\boudy\Desktop\email\profiles\mails\reccived";
-        string spamfile = @"C:\Users\boudy\Desktop\email\profiles\mails\spam";
+        // Paths to different mail folders\
+        private string allfile;
+        private string sentfile;
+        private string recfile;
+        private string spamfile; 
 
+        private string currentUsername;
+        
         public InboxForm(string currentUsername)
         {
             InitializeComponent();
             fileMapping = new Dictionary<int, string>();
-
+            this.currentUsername = currentUsername;
+            this.allfile = @$"C:\Users\boudy\Desktop\email\profiles\{this.currentUsername}\mails\all";
+            this.sentfile = @$"C:\Users\boudy\Desktop\email\profiles\{this.currentUsername}\mails\sent";
+            this.recfile = @$"C:\Users\boudy\Desktop\email\profiles\{this.currentUsername}\\mails\reccived";
+            this.spamfile = @$"C:\Users\boudy\Desktop\email\profiles\{this.currentUsername}\mails\spam";
         }
+        
         private void create_Click(object sender, EventArgs e)
         {
             createFolderFrom f2 = new createFolderFrom();
@@ -33,26 +40,26 @@ namespace project
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            RefreshTextBox(allfile);
+            RefreshTextBox(this.allfile);
         }
         private void sent_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            RefreshTextBox(sentfile);
+            RefreshTextBox(this.sentfile);
         }
 
         // Button click event to load received mails
         private void reccievd_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            RefreshTextBox(recfile);
+            RefreshTextBox(this.recfile);
         }
 
         // Button click event to load spam mails
         private void spam_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            RefreshTextBox(spamfile);
+            RefreshTextBox(this.spamfile);
         }
 
         // Method to refresh the DataGridView with file information from a given folder
