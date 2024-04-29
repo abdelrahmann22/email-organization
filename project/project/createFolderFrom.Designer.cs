@@ -1,6 +1,6 @@
 ﻿namespace project
 {
-    partial class Form2
+    partial class createFolderFrom
     {
         /// <summary>
         /// Required designer variable.
@@ -19,13 +19,6 @@
             }
             base.Dispose(disposing);
         }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             textBox1 = new TextBox();
@@ -59,12 +52,10 @@
             Controls.Add(textBox1);
             Name = "Form2";
             Text = "Form2";
-            Load += Form2_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
-        #endregion
 
         private TextBox textBox1;
         private Button button1;

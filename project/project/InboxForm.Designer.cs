@@ -27,73 +27,138 @@
         /// </summary>
         private void InitializeComponent()
         {
-            emailView = new DataGridView();
-            checkboxColumn = new DataGridViewCheckBoxColumn();
-            nameView = new DataGridViewTextBoxColumn();
-            subjectView = new DataGridViewTextBoxColumn();
-            dateView = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)emailView).BeginInit();
+            all = new Button();
+            sent = new Button();
+            reccievd = new Button();
+            spam = new Button();
+            dataGridView1 = new DataGridView();
+            subject = new DataGridViewTextBoxColumn();
+            sender = new DataGridViewTextBoxColumn();
+            time = new DataGridViewTextBoxColumn();
+            view = new DataGridViewButtonColumn();
+            change = new DataGridViewButtonColumn();
+            create = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // emailView
+            // all
             // 
-            emailView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            emailView.Columns.AddRange(new DataGridViewColumn[] { checkboxColumn, nameView, subjectView, dateView });
-            emailView.Dock = DockStyle.Right;
-            emailView.Location = new Point(195, 0);
-            emailView.Name = "emailView";
-            emailView.Size = new Size(1062, 582);
+            all.Location = new Point(52, 22);
+            all.Name = "all";
+            all.Size = new Size(75, 67);
+            all.TabIndex = 1;
+            all.Text = "all";
+            all.UseVisualStyleBackColor = true;
+            all.Click += button1_Click;
             // 
-            // checkboxColumn
+            // sent
             // 
-            checkboxColumn.HeaderText = "";
-            checkboxColumn.Name = "checkboxColumn";
-            checkboxColumn.Resizable = DataGridViewTriState.False;
-            checkboxColumn.Width = 50;
+            sent.Location = new Point(52, 118);
+            sent.Name = "sent";
+            sent.Size = new Size(75, 67);
+            sent.TabIndex = 2;
+            sent.Text = "sent";
+            sent.UseVisualStyleBackColor = true;
+            sent.Click += sent_Click;
             // 
-            // nameView
+            // reccievd
             // 
-            nameView.HeaderText = "Name";
-            nameView.Name = "nameView";
-            nameView.ReadOnly = true;
-            nameView.Resizable = DataGridViewTriState.False;
-            nameView.Width = 300;
+            reccievd.Location = new Point(52, 220);
+            reccievd.Name = "reccievd";
+            reccievd.Size = new Size(75, 67);
+            reccievd.TabIndex = 3;
+            reccievd.Text = "reccievd";
+            reccievd.UseVisualStyleBackColor = true;
+            reccievd.Click += reccievd_Click;
             // 
-            // subjectView
+            // spam
             // 
-            subjectView.HeaderText = "Subject";
-            subjectView.Name = "subjectView";
-            subjectView.ReadOnly = true;
-            subjectView.Resizable = DataGridViewTriState.False;
-            subjectView.Width = 500;
+            spam.Location = new Point(52, 324);
+            spam.Name = "spam";
+            spam.Size = new Size(75, 67);
+            spam.TabIndex = 4;
+            spam.Text = "spam";
+            spam.UseVisualStyleBackColor = true;
+            spam.Click += spam_Click;
             // 
-            // dateView
+            // dataGridView1
             // 
-            dateView.HeaderText = "Date";
-            dateView.Name = "dateView";
-            dateView.ReadOnly = true;
-            dateView.Resizable = DataGridViewTriState.False;
-            dateView.SortMode = DataGridViewColumnSortMode.NotSortable;
-            dateView.Width = 200;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { subject, sender, time, view, change });
+            dataGridView1.Location = new Point(178, 22);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(610, 369);
+            dataGridView1.TabIndex = 5;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellContentDoubleClick += dataGridView1_CellContentClick;
+            dataGridView1.ColumnHeaderMouseClick += dataGridView1_ColumnHeaderMouseClick;
+            // 
+            // subject
+            // 
+            subject.HeaderText = "subject";
+            subject.Name = "subject";
+            // 
+            // sender
+            // 
+            sender.HeaderText = "sender";
+            sender.Name = "sender";
+            // 
+            // time
+            // 
+            time.HeaderText = "time";
+            time.Name = "time";
+            // 
+            // view
+            // 
+            view.HeaderText = "view";
+            view.Name = "view";
+            // 
+            // change
+            // 
+            change.HeaderText = "change";
+            change.Name = "change";
+            // 
+            // create
+            // 
+            create.Location = new Point(178, 398);
+            create.Name = "create";
+            create.Size = new Size(104, 40);
+            create.TabIndex = 6;
+            create.Text = "create folder";
+            create.UseVisualStyleBackColor = true;
+            create.Click += create_Click;
             // 
             // InboxForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1257, 582);
-            Controls.Add(emailView);
+            ClientSize = new Size(800, 450);
+            Controls.Add(create);
+            Controls.Add(dataGridView1);
+            Controls.Add(spam);
+            Controls.Add(reccievd);
+            Controls.Add(sent);
+            Controls.Add(all);
             Name = "InboxForm";
-            Text = "InboxForm";
-            ((System.ComponentModel.ISupportInitialize)emailView).EndInit();
+            Text = "InboxView";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView emailView;
-        private DataGridViewCheckBoxColumn checkboxColumn;
-        private DataGridViewTextBoxColumn nameView;
-        private DataGridViewTextBoxColumn subjectView;
-        private DataGridViewTextBoxColumn dateView;
+        private Button all;
+        private Button sent;
+        private Button reccievd;
+        private Button spam;
+        private DataGridView dataGridView1;
+        private Button create;
+        private DataGridViewTextBoxColumn subject;
+        private DataGridViewTextBoxColumn sender;
+        private DataGridViewTextBoxColumn time;
+        private DataGridViewButtonColumn view;
+        private DataGridViewButtonColumn change;
     }
 }

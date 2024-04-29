@@ -8,24 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\youss\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\boudy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\youss\\OneDrive\\Desktop\\project\\email-organization\\project\\project\\project.csproj",
+      "projectUniqueName": "C:\\Users\\boudy\\Desktop\\project1\\email-organization\\project\\project\\project.csproj",
       "projectName": "project",
-      "projectPath": "C:\\Users\\youss\\OneDrive\\Desktop\\project\\email-organization\\project\\project\\project.csproj",
-      "packagesPath": "C:\\Users\\youss\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\youss\\OneDrive\\Desktop\\project\\email-organization\\project\\project\\obj\\",
+      "projectPath": "C:\\Users\\boudy\\Desktop\\project1\\email-organization\\project\\project\\project.csproj",
+      "packagesPath": "C:\\Users\\boudy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\boudy\\Desktop\\project1\\email-organization\\project\\project\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\youss\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\boudy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

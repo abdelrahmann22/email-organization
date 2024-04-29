@@ -15,7 +15,6 @@ C:\Users\youss\OneDrive\Desktop\project\email-organization\project\project\obj\D
 C:\Users\youss\OneDrive\Desktop\project\email-organization\project\project\obj\Debug\net8.0-windows\project.pdb
 C:\Users\youss\OneDrive\Desktop\project\email-organization\project\project\obj\Debug\net8.0-windows\project.genruntimeconfig.cache
 C:\Users\youss\OneDrive\Desktop\project\email-organization\project\project\obj\Debug\net8.0-windows\ref\project.dll
-<<<<<<< HEAD
 C:\Users\boudy\Desktop\email-organization\project\project\bin\Debug\net8.0-windows\project.exe
 C:\Users\boudy\Desktop\email-organization\project\project\bin\Debug\net8.0-windows\project.deps.json
 C:\Users\boudy\Desktop\email-organization\project\project\bin\Debug\net8.0-windows\project.runtimeconfig.json
@@ -38,7 +37,26 @@ C:\Users\boudy\Desktop\email-organization\project\project\obj\Debug\net8.0-windo
 C:\Users\boudy\Desktop\email-organization\project\project\obj\Debug\net8.0-windows\project.HomeForm.resources
 C:\Users\boudy\Desktop\email-organization\project\project\obj\Debug\net8.0-windows\project.ProfileForm.resources
 C:\Users\boudy\Desktop\email-organization\project\project\obj\Debug\net8.0-windows\project.SettingsForm.resources
-=======
-C:\Users\youss\OneDrive\Desktop\project\email-organization\project\project\obj\Debug\net8.0-windows\project.Form2.resources
-C:\Users\youss\OneDrive\Desktop\project\email-organization\project\project\obj\Debug\net8.0-windows\project.Form3.resources
->>>>>>> 7577b6faeb7e68b8cee1d7886d351b182a3d10a8
+C:\Users\boudy\Desktop\project1\email-organization\project\project\bin\Debug\net8.0-windows\project.exe
+C:\Users\boudy\Desktop\project1\email-organization\project\project\bin\Debug\net8.0-windows\project.deps.json
+C:\Users\boudy\Desktop\project1\email-organization\project\project\bin\Debug\net8.0-windows\project.runtimeconfig.json
+C:\Users\boudy\Desktop\project1\email-organization\project\project\bin\Debug\net8.0-windows\project.dll
+C:\Users\boudy\Desktop\project1\email-organization\project\project\bin\Debug\net8.0-windows\project.pdb
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.createFolderFrom.resources
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.HomeForm.resources
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.InboxForm.resources
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.LoginForm.resources
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.ProfileForm.resources
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.SettingsForm.resources
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.SignUpForm.resources
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.csproj.GenerateResource.cache
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.AssemblyInfoInputs.cache
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.AssemblyInfo.cs
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.csproj.CoreCompileInputs.cache
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.sourcelink.json
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.dll
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\refint\project.dll
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.pdb
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\project.genruntimeconfig.cache
+C:\Users\boudy\Desktop\project1\email-organization\project\project\obj\Debug\net8.0-windows\ref\project.dll
