@@ -143,6 +143,7 @@
             Controls.Add(usernameBox);
             Name = "SignUpForm";
             Text = "SignUpForm";
+            Load += SignUpForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -21,7 +21,7 @@ namespace project
 
         private void signupBtn_Click(object sender, EventArgs e)
         {
-            string pathToUsers = "C:\\Users\\boudy\\Desktop\\email\\users\\UsersData.txt";
+            string pathToUsers = @"C:\Users\youss\OneDrive\Desktop\bb\users\UsersData.txt";
             string username = usernameBox.Text;
             try
             {
@@ -37,20 +37,20 @@ namespace project
                 {
                     try
                     {
-                        using (StreamWriter writer = new StreamWriter($"C:\\Users\\boudy\\Desktop\\email\\users\\UsersData.txt", true))
+                        using (StreamWriter writer = new StreamWriter(@"C:\Users\youss\OneDrive\Desktop\bb\users\UsersData.txt", true))
                         {
                             writer.WriteLine(usernameBox.Text);
 
                         };
 
-                        using (StreamWriter writer = new StreamWriter($"C:\\Users\\boudy\\Desktop\\email\\users\\{usernameBox.Text}.txt", true))
+                        using (StreamWriter writer = new StreamWriter($"C:\\Users\\youss\\OneDrive\\Desktop\\bb\\users\\{usernameBox.Text}.txt", true))
                         {
                             writer.WriteLine(usernameBox.Text);
                             writer.WriteLine(passwordBox.Text);
                             writer.WriteLine(emailBox.Text);
 
                         };
-                        using (StreamWriter writer = new StreamWriter($"C:\\Users\\boudy\\Desktop\\email\\profiles\\{usernameBox.Text}.txt", true))
+                        using (StreamWriter writer = new StreamWriter($"C:\\Users\\youss\\OneDrive\\Desktop\\bb\\users\\{usernameBox.Text}.txt", true))
                         {
                             writer.WriteLine(usernameBox.Text);
                         };
@@ -82,6 +82,11 @@ namespace project
         }
 
         private void usernameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignUpForm_Load(object sender, EventArgs e)
         {
 
         }

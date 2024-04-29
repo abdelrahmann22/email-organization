@@ -21,7 +21,7 @@ namespace project
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            string pathToUser = $"C:\\Users\\boudy\\Desktop\\email\\users\\{enterUsernameBox.Text}.txt";
+            string pathToUser = $"C:\\Users\\youss\\OneDrive\\Desktop\\bb\\users\\{enterUsernameBox.Text}.txt";
             if (File.Exists(pathToUser))
             {
                 string[] lines = File.ReadAllLines(pathToUser);
@@ -53,6 +53,9 @@ namespace project
             signupForm.Show();
         }
 
-        
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

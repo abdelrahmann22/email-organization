@@ -102,6 +102,7 @@
             Controls.Add(enterPasswordLabel);
             Name = "LoginForm";
             Text = "LoginForm";
+            Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
