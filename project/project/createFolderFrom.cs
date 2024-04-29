@@ -1,23 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace project
 {
-    public partial class Form2 : Form
+    public partial class createFolderFrom : Form
     {
-        public Form2()
+        public createFolderFrom()
         {
             InitializeComponent();
         }
-
-        // This method is called when Form2 is loaded
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            // No action needed on form load in this example
-        }
-
-        // This method is called when button1 is clicked
         private void button1_Click(object sender, EventArgs e)
         {
             // Define the folder path where the new folder will be created
