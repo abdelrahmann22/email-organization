@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.Devices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,25 +14,25 @@ namespace project
     public partial class InboxForm : Form
     {
         private Dictionary<int, string> fileMapping;
-        // Paths to different mail folders\
+
         private string allfile;
         private string sentfile;
         private string recfile;
-        private string spamfile; 
+        private string spamfile;
 
         private string currentUsername;
-        
+
         public InboxForm(string currentUsername)
         {
             InitializeComponent();
             fileMapping = new Dictionary<int, string>();
             this.currentUsername = currentUsername;
-            this.allfile = @$"C:\Users\boudy\Desktop\email\profiles\{this.currentUsername}\mails\all";
-            this.sentfile = @$"C:\Users\boudy\Desktop\email\profiles\{this.currentUsername}\mails\sent";
-            this.recfile = @$"C:\Users\boudy\Desktop\email\profiles\{this.currentUsername}\\mails\reccived";
-            this.spamfile = @$"C:\Users\boudy\Desktop\email\profiles\{this.currentUsername}\mails\spam";
+            this.allfile = @$"C:\Users\youss\OneDrive\Desktop\bb\profilles\{this.currentUsername}\mails\all";
+            this.sentfile = @$"C:\Users\youss\OneDrive\Desktop\bb\profilles\{this.currentUsername}\mails\sent";
+            this.recfile = $@"C:\Users\youss\OneDrive\Desktop\bb\profilles\{this.currentUsername}\mails\reccived";
+            this.spamfile = @$"C:\Users\youss\OneDrive\Desktop\bb\profilles\{this.currentUsername}\mails\spam";
         }
-        
+
         private void create_Click(object sender, EventArgs e)
         {
             createFolderFrom f2 = new createFolderFrom();
@@ -65,25 +66,46 @@ namespace project
         // Method to refresh the DataGridView with file information from a given folder
         private void RefreshTextBox(string filepath)
         {
-            // Clear the file mapping dictionary
-            fileMapping.Clear();
-
-            // Get all files in the specified folder
-            string[] files = Directory.GetFiles(filepath);
-
-            // Iterate through each file
-            for (int i = 0; i < files.Length; i++)
+            try
             {
-                FileInfo file = new FileInfo(files[i]);
-                string firstLine = ReadFirstLine(files[i]); // Read the first line of the file
-                string FileName = Path.GetFileNameWithoutExtension(files[i]); // Get the file name without extension
-                DateTime creationTime = file.CreationTime; // Get the creation time of the file
-                // Add file information to the DataGridView
-                this.dataGridView1.Rows.Add(firstLine, FileName, creationTime);
-                // Add mapping of row index to file path
-                fileMapping.Add(i, files[i]);
+                // Clear the file mapping dictionary
+                fileMapping.Clear();
+
+                // Get all files in the specified folder
+                string[] files = Directory.GetFiles(filepath);
+
+                // Iterate through each file
+                for (int i = 0; i < files.Length; i++)
+                {
+                    FileInfo file = new FileInfo(files[i]);
+
+                    // Check if the file exists
+                    if (file.Exists)
+                    {
+                        string firstLine = ReadFirstLine(files[i]); // Read the first line of the file
+                        string FileName = Path.GetFileNameWithoutExtension(files[i]); // Get the file name without extension
+                        DateTime creationTime = file.CreationTime; // Get the creation time of the file
+                                                                   // Add file information to the DataGridView
+                        this.dataGridView1.Rows.Add(firstLine, FileName, creationTime);
+                        // Add mapping of row index to file path
+                        fileMapping.Add(i, files[i]);
+                    }
+                    else
+                    {
+                        // Handle the case where the file does not exist
+                        // You can log the error, show a message to the user, or take any other appropriate action
+                        Console.WriteLine($"File '{files[i]}' does not exist.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that occur during the execution of the method
+                // You can log the exception, display an error message to the user, or take any other appropriate action
+                Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
+
 
         // DataGridView cell content click event
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -91,7 +113,38 @@ namespace project
             // Check if the "change" button is clicked
             if (dataGridView1.Columns[e.ColumnIndex].Name == "change")
             {
-                MessageBox.Show("aa"); // Display a message box
+
+                // Open a folder dialog to select the destination folder
+                using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
+                {
+                    folderDialog.SelectedPath = @$"C:\Users\youss\OneDrive\Desktop\bb\profilles\{this.currentUsername}\mails\created\";
+                    DialogResult result = folderDialog.ShowDialog();
+
+                    if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderDialog.SelectedPath))
+                    {
+                        try
+                        {
+
+                            // Get the source file path
+                            string sourceFilePath = fileMapping[e.RowIndex];
+
+                            // Combine the destination folder path with the file name
+                            string fileName = Path.GetFileName(sourceFilePath);
+                            string destinationFilePath = Path.Combine(folderDialog.SelectedPath, fileName);
+
+                            // Copy the file to the selected folder
+                            File.Copy(sourceFilePath, destinationFilePath);
+
+                            MessageBox.Show("File copied successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"An error occurred while copying the file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+
+
             }
             // Check if the "view" button is clicked
             if (dataGridView1.Columns[e.ColumnIndex].Name == "view")
